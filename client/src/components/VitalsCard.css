@@ -1,0 +1,76 @@
+.vitals-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+
+.info-icon {
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.info-icon:hover {
+  opacity: 1;
+}
+
+.vitals-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.temp-display {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.temp-label {
+  font-size: 13px;
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+
+.temp-value {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.status-indicator {
+  text-align: center;
+}
+
+.status-label {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+}
+
+.status-label.normal {
+  background: rgba(46, 213, 115, 0.3);
+}
+
+.status-label.warning {
+  background: rgba(255, 107, 107, 0.3);
+}

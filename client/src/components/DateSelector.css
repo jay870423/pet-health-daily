@@ -1,0 +1,173 @@
+.date-selector {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  flex-wrap: wrap;
+}
+
+.selector-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.selector-group.pet-selector {
+  flex: 1;
+  min-width: 300px;
+}
+
+.selector-group label {
+  font-size: 14px;
+  color: #5a6c7d;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* 宠物下拉选择器 */
+.pet-select {
+  padding: 10px 16px;
+  border: 1px solid #e0e6ed;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #2c3e50;
+  transition: all 0.3s;
+  background: #fafbfc;
+  cursor: pointer;
+  min-width: 220px;
+  font-family: inherit;
+}
+
+.pet-select:hover {
+  border-color: #b8c4d1;
+}
+
+.pet-select:focus {
+  outline: none;
+  border-color: #6c5ce7;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+}
+
+.pet-select option {
+  padding: 8px;
+  font-size: 14px;
+}
+
+/* 当前宠物信息展示 */
+.current-pet-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.current-pet-info:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.pet-icon-large {
+  font-size: 32px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.pet-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pet-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.pet-type {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+/* 日期选择器 */
+.date-input {
+  padding: 10px 16px;
+  border: 1px solid #e0e6ed;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #2c3e50;
+  transition: all 0.3s;
+  background: #fafbfc;
+  cursor: pointer;
+  min-width: 180px;
+}
+
+.date-input:hover {
+  border-color: #b8c4d1;
+}
+
+.date-input:focus {
+  outline: none;
+  border-color: #6c5ce7;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+}
+
+/* 动画 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .date-selector {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .selector-group.pet-selector {
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 100%;
+  }
+  
+  .pet-select {
+    width: 100%;
+  }
+  
+  .current-pet-info {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .date-input {
+    width: 100%;
+  }
+}
